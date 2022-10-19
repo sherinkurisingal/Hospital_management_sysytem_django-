@@ -1,0 +1,68 @@
+{% extends 'stock/base.html' %}
+{% block content %}
+<div class="bg-yellow-100">
+<div class="container">
+<div class="row">
+    <div class="col-sm-8"></div>
+
+ <h1 class="text-xl italic font-bold text-red-800 text-center">Online Consultation Form </h1>
+<form  class="w-2/5" method="POST" enctype="multipart/form-data" >
+    
+    {% csrf_token %}
+
+<div>
+        <label class="font-medium italic m-10">Patient Name:</label>
+        <div   class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-8 border-r-8" >
+         {{form.name}}
+         </div>
+    </div>
+    <div>
+        <label class="font-medium italic m-10">Age</label>
+        <div  class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-10 border-r-8" >
+         {{form.age}}
+         </div>
+    </div>
+    
+    <div>
+        <label class="font-medium italic m-10">Gender</label>
+        <div  class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-10 border-r-8">
+        {{form.gender}}
+        </div>
+    </div>
+
+     <div>
+        <label class="font-medium italic m-10">Date</label>
+        <div  class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-10 border-r-8">
+        {{form.date}}
+        </div>
+    </div>
+
+     <div>
+        <label class="font-medium italic m-10"> Doctor_type</label>
+        <div  class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-10 border-r-8">
+        {{form.doctor_type}}
+        </div>
+    </div>
+      <div>
+        <label class="font-medium italic m-10">Mobile</label>
+        <div  class="bg-blend-darken  border-solid border-blue-300 my-3.5 ml-10 border-r-8">
+        {{form.mobile}}
+        </div>
+    </div>
+   
+      
+    <button type="submit" class=" btn btn-outline btn-secondary ml-10" >submit</button>
+        
+
+</div>
+    
+    
+</form>
+
+</div>
+
+
+
+
+
+{% endblock %}  

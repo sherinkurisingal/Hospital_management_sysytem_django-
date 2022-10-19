@@ -1,0 +1,12 @@
+{% extends 'stock/base.html' %}
+{% block content %}
+
+ {% for i in med %}
+  <a href="{% url 'stock:detailing' i.id %}"> 
+  <div>{{i.med_name}}</div></a>
+  {% comment %} <div>{{i.price}}</div>
+  <div>{{i.qty}}</div>
+  <div>{{i.desc}}</div></a> {% endcomment %}
+  {% endfor %}
+
+{% endblock %}  

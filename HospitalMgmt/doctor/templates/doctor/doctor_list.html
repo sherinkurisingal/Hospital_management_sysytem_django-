@@ -1,0 +1,13 @@
+{% extends 'stock/base.html' %}
+{% block content %}
+
+ {% for i in list %}
+  <b>{{i.d_name}}</b><br/>
+  <b>{{i.specialise}}</b><br/>
+
+  {% comment %} <div>{{i.price}}</div>
+  <div>{{i.qty}}</div>
+  <div>{{i.desc}}</div></a> {% endcomment %}
+  {% endfor %}
+
+{% endblock %}  

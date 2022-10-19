@@ -1,0 +1,63 @@
+{% extends 'stock/base.html' %}
+{% block content %}
+ <h1 class="text-xl italic font-bold text-red-800 text-center">Add Patient Details </h1>
+<form  class="w-2/5" method="POST" enctype="multipart/form-data" >
+    
+    {% csrf_token %}
+    <div>
+        <label class="font-medium italic m-10">First Name:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="f_Name" type="text" name="f_name" id="f_name" >
+
+    </div>
+     <div>
+        <label class="font-medium italic m-10">Last Name:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="l_Name" type="text" name="l_name" id="l_name" >
+
+    </div>
+    
+    <div>
+        <label class="font-medium italic m-10">Address:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="address" type="text" name="address" id="address" >
+    </div>
+
+    <div>
+        <label class="font-medium italic m-10">Place:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="place" type="text" name="place" id="place" >
+
+    </div>
+
+    <div>
+        <label class="font-medium italic m-10">Age</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="age" type="text" name="age" id="age" >
+
+    </div>
+    <div>
+        <label class="font-medium italic m-10">Gender</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="Gender" type="text" name="gender" id="gender" >
+
+    </div>
+
+    <div>
+        <label class="font-medium italic m-10">mobile:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="mobile" type="text" name="mobile" id="mobile" >
+
+    </div>
+
+    <div>
+        <label class="font-medium italic m-10">E-mail:</label>
+        <input   class="bg-blend-darken shadow-lg border-solid border-pink-300 my-3.5 ml-3 border-r-8"placeholder="email" type="text" name="email" id="email" >
+
+    </div>
+
+    <div class>
+      
+        <input type="submit" class=" ml-48 mt-3 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-5 mb-7"  name="add_Patient" value="add_patient">
+        
+
+    </div>
+    
+    
+</form>
+
+
+{% endblock %}  

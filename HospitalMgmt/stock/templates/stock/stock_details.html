@@ -1,0 +1,10 @@
+{% extends 'stock/base.html' %}
+{% block content %}
+ <div class="mt-10 text-sky-700">  Medicine ID: {{med.id}}</div>
+     <div class="mt-10 text-blue-400"> NAME: {{med.med_name}}</div>
+     <div class="mt-10 text-pink-400">PRICE: {{med.price}}</div>
+     <div class="mt-10 text-pink-400">Quantity: {{med.qty}}</div>
+     <div class="mt-10 text-green-700">DES: {{med.desc}}</div>
+     <div class="card w-56 bg-base-100 shadow-xl image-full">
+
+{% endblock %}  
