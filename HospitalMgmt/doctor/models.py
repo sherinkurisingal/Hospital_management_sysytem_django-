@@ -5,10 +5,11 @@ from patients.models import Patient
 # Create your models here.
 class Doctor(models.Model):
     def __str__(self):
-        return self.med_name
-    user=models.OneToOneField(User,on_delete=models.CASCADE)
+        return self.d_name
+    user=models.OneToOneField(User,on_delete=models.CASCADE,null=True, blank=True)
     d_name=models.CharField(max_length=50)
-    specialise=models.CharField(max_length=50)    
+    specialise=models.CharField(max_length=50) 
+    image=models.ImageField(blank=True ,upload_to='images')   
 
 class Med_assign(models.Model):
      def __str__(self):

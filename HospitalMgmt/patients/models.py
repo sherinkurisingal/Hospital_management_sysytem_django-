@@ -16,3 +16,10 @@ class Patient(models.Model):
     mob=models.PositiveIntegerField()
     email=models.EmailField()
     
+
+class Bill(models.Model):
+    patient_id=models.OneToOneField(Patient,on_delete=models.CASCADE)
+    bill_no=models.IntegerField()
+    bill_date=models.DateField() 
+    bill_amt=models.IntegerField()
+    

@@ -1,0 +1,22 @@
+{% extends 'stock/base.html' %}
+{% block content %}
+<div class="bg-yellow-100">
+<div class="container">
+<div class="row">
+    <div class="col-sm-8"></div>
+
+ <h1 class="text-xl italic font-bold text-red-800 text-center">OP Ticket  </h1>
+<form  class="w-2/5" method="POST" enctype="multipart/form-data" >
+    
+    {% csrf_token %}
+     <div class="mt-10 text-sky-700">  TOCKEN NO: {{op.id}}</div>
+     <div class="mt-10 text-blue-400"> NAME: {{op.med_name}}</div>
+     <div class="mt-10 text-pink-400">AGE: {{op.age}}</div>
+     <div class="mt-10 text-pink-400">GENDER: {{op.gender}}</div>
+     <div class="mt-10 text-green-700">MOB: {{op.mobile}}</div>
+     <div class="mt-10 text-green-700">DOCTOR: {{op.doctor_type}}</div>
+
+     <div class="card w-56 bg-base-100 shadow-xl image-full">
+
+     
+{% endblock %}  

@@ -1,0 +1,12 @@
+{% extends 'stock/base.html' %}
+{% block content %}
+ <h1 class="text-xl italic font-bold text-red-800 text-center">BILL RECEIPT </h1>
+<form  class="w-2/5" method="POST" enctype="multipart/form-data" >
+    
+    {% csrf_token %}
+
+   
+    {% load django_tables2 %}
+    {% render_table table %}
+
+    {% endblock %}  

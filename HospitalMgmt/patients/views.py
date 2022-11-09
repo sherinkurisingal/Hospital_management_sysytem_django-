@@ -1,10 +1,11 @@
 from django.shortcuts import render
 import django_tables2 as tables
-
-from patients.models import Patient
+from django.contrib.auth.decorators import login_required
+from .models import Patient,Bill
 from django.shortcuts import render,redirect
 
 # Create your views here.
+@login_required 
 def add_patients(request):
     if request.method=='POST':
         f_name=request.POST.get('f_name')
@@ -35,4 +36,18 @@ class patientlist(tables.SingleTableView):
    table_class = list
    queryset = Patient.objects.all()
    template_name = "patient_list.html"
+
+def add_bill(request):
+    if request.method=='POST':
+         bill_no=request.POST.get('bill_no')
+         bill_date=request.POST.get('bill_date')
+         bill_amt=request.POST.get('bill_amt') 
+         bill=Bill(bill_no=bill_no,bill_date=bill_date,bill_amt=bill_amt)
+         bill.save()
+         return redirect('/patients/billgenerate')
+    return render(request,'patients/patientbill.html')   
              
+class billgenerate(tables.SingleTableView):
+    table_class = list
+    queryset = Patient.objects.all()
+    template_name = "billgenerate.html"

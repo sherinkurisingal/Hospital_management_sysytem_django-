@@ -2,12 +2,9 @@
 {% block content %}
 
  {% for i in list %}
-  <b>{{i.d_name}}</b><br/>
-  <b>{{i.specialise}}</b><br/>
-
-  {% comment %} <div>{{i.price}}</div>
-  <div>{{i.qty}}</div>
-  <div>{{i.desc}}</div></a> {% endcomment %}
+ <div>
+  <b>{{i.d_name}}:{{i.specialise}}:<img class=" w-32 h-40 md:h-auto object-cover md:w-40 rounded-t-lg md:rounded-none md:rounded-l-lg" src="{{i.image.url}}"></b><br/>
+</div>
   {% endfor %}
 
 {% endblock %}  
